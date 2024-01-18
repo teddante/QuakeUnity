@@ -52,18 +52,15 @@ namespace Assets.Scripts.Quake
 
         void AngleVectors(vec3_t angles, vec3_t forward, vec3_t right, vec3_t up)
         {
-            float angle;
-            float sr, sp, sy, cr, cp, cy;
-
-            angle = (angles[YAW] * (M_PI * 2 / 360));
-            sy = sin(angle);
-            cy = cos(angle);
+            var angle = (angles[YAW] * (M_PI * 2 / 360));
+            var sy = sin(angle);
+            var cy = cos(angle);
             angle = (angles[PITCH] * (M_PI * 2 / 360));
-            sp = sin(angle);
-            cp = cos(angle);
+            var sp = sin(angle);
+            var cp = cos(angle);
             angle = (angles[ROLL] * (M_PI * 2 / 360));
-            sr = sin(angle);
-            cr = cos(angle);
+            var sr = sin(angle);
+            var cr = cos(angle);
 
             forward[0] = cp * cy;
             forward[1] = cp * sy;
